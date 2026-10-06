@@ -1,0 +1,153 @@
+{
+  "features": [
+    "recency",
+    "cadence",
+    "cadence_ratio",
+    "orders_recent",
+    "orders_previous",
+    "order_change"
+  ],
+  "log_transformed": [
+    "recency",
+    "cadence",
+    "cadence_ratio",
+    "orders_recent",
+    "orders_previous",
+    "n",
+    "tenure"
+  ],
+  "mean": [
+    2.2191397998371727,
+    2.721537698321992,
+    0.5883800739198253,
+    1.8427938023274293,
+    1.6023499009371398,
+    0.27111531499501135
+  ],
+  "std": [
+    1.0391864506937587,
+    0.4226495230641414,
+    0.5018145799815231,
+    0.4496264313749827,
+    0.48887732171331855,
+    0.7390400396605411
+  ],
+  "weights": [
+    -3.0394571588691663,
+    0.14397927212479147,
+    0.30270095107582384,
+    0.6289573287380507,
+    0.030671856708186864,
+    0.05568589585215758,
+    0.060319225879521564
+  ],
+  "calibration_weights": [
+    0.9113186034364175,
+    1.1625842112664226
+  ],
+  "metrics": {
+    "n": 1962,
+    "base_rate": 0.1472986748216106,
+    "auc": 0.7458826011329956,
+    "brier": 0.10570116159409962,
+    "top10_precision": 0.5279187817258884,
+    "top10_lift": 3.584002248256723,
+    "top10_recall": 0.35986159169550175,
+    "recency_auc": 0.7534110863149099,
+    "cadence_auc": 0.6975110497066166,
+    "train_n": 1265,
+    "calibration_n": 1235,
+    "selected_features": [
+      "recency",
+      "cadence",
+      "cadence_ratio",
+      "orders_recent",
+      "orders_previous",
+      "order_change"
+    ],
+    "selection": [
+      {
+        "features": [
+          "recency"
+        ],
+        "validation_auc": 0.7161686709026939
+      },
+      {
+        "features": [
+          "recency",
+          "cadence",
+          "n"
+        ],
+        "validation_auc": 0.7156107231003518
+      },
+      {
+        "features": [
+          "recency",
+          "cadence",
+          "cadence_ratio",
+          "orders_recent",
+          "orders_previous",
+          "order_change"
+        ],
+        "validation_auc": 0.7215906107231004
+      },
+      {
+        "features": [
+          "recency",
+          "cadence",
+          "cadence_ratio",
+          "orders_recent",
+          "orders_previous",
+          "order_change",
+          "spend_change",
+          "late_rate",
+          "review",
+          "review_missing",
+          "late_missing",
+          "n",
+          "tenure"
+        ],
+        "validation_auc": 0.641712177703093
+      }
+    ],
+    "coefficients": [
+      {
+        "feature": "recency",
+        "weight": 0.14397927212479147
+      },
+      {
+        "feature": "cadence",
+        "weight": 0.30270095107582384
+      },
+      {
+        "feature": "cadence_ratio",
+        "weight": 0.6289573287380507
+      },
+      {
+        "feature": "orders_recent",
+        "weight": 0.030671856708186864
+      },
+      {
+        "feature": "orders_previous",
+        "weight": 0.05568589585215758
+      },
+      {
+        "feature": "order_change",
+        "weight": 0.060319225879521564
+      }
+    ]
+  },
+  "target": "No product-backed purchase in the next 90 days",
+  "eligibility": "At least 10 product-backed purchases and 180 days history",
+  "asof": "2018-08-31 23:59:59",
+  "sources": {
+    "order_reviews.csv": "7460c359d2535566d6b6289eb6abdc03dbd41803e50f1e71ecc99ae83a7a17da",
+    "customers.csv": "a5cfa32b348cf9fb309b285f5f8e87a26d739c38e43513801aa2df4dc6615903",
+    "products.csv": "71abc349777e5300f3799ec7fc740701672436f15a8968eac30ddb05817ea7b2",
+    "orders.csv": "9ffb807e7c6e8c49c30869bc7ee1075a49300ef07bf25d3c6d734abb45ca3945",
+    "geolocation.csv": "1e4f4b8ad7da5dccde4d386946b93d8132e36c310f74ab0fe7bbad7ab4811078",
+    "order_payments.csv": "f484ac97e845dddb5d568b47a4381a53a60d00739296699578d51c8a8226cb1f",
+    "order_lines.csv": "4be59adc17870f60cf53c6df4de48c726d2a2d39c86cb31cc6d1ebc169c16fec",
+    "order_items.csv": "5b4ca8e70ad625aac738a54ab0f6d1580dd174fb9b72dabb64f3378f55981772"
+  }
+}

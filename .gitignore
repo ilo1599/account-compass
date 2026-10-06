@@ -1,0 +1,14 @@
+node_modules/
+.sites-runtime/
+*.tar.gz
+.DS_Store
+
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+data/
+work/
+*.zip
